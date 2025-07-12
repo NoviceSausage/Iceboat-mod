@@ -1,0 +1,63 @@
+plugins {
+    id 'fabric-loom' version '1.11-SNAPSHOT'
+	id 'maven-publish'
+}
+
+group = 'com.iceboat'
+version = '1.0.0'
+base {
+    archivesName = 'iceboat'
+}
+
+repositories {
+    maven { url = 'https://maven.fabricmc.net/' }
+    mavenCentral()
+}
+
+loom {
+	splitEnvironmentSourceSets()
+	mods {
+		"iceboat" {
+			sourceSet sourceSets.main
+		}
+	}
+}
+
+dependencies {
+    minecraft "com.mojang:minecraft:1.21.6"
+    mappings "net.fabricmc:yarn:1.21.6+build.1:v2"
+    modImplementation "net.fabricmc:fabric-loader:0.16.14"
+    modImplementation "net.fabricmc.fabric-api:fabric-api:0.128.2+1.21.6"
+}
+
+processResources {
+	inputs.property "version", project.version
+	filesMatching("fabric.mod.json") {
+        expand "version": project.version
+	}
+}
+
+tasks.withType(JavaCompile).configureEach {
+	it.options.release = 21
+}
+
+java {
+	withSourcesJar()
+	sourceCompatibility = JavaVersion.VERSION_21
+	targetCompatibility = JavaVersion.VERSION_21
+}
+
+jar {
+	from("LICENSE") {
+        rename { "${it}_iceboat" }
+	}
+}
+
+publishing {
+	publications {
+		create("mavenJava", MavenPublication) {
+            artifactId = 'iceboat'
+			from components.java
+		}
+	}
+}

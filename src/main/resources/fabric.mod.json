@@ -1,0 +1,24 @@
+{
+	"schemaVersion": 1,
+	"id": "iceboat",
+	"version": "1.0.0",
+	"name": "IceBoat",
+	"description": "enable boat to rise a block on ice.让船可以在冰面上抬升一格上坡。",
+	"authors": ["XeshomTea"],
+	"contact": {},
+	"license": "See LICENSE file (MIT, CC0-1.0, GPL-3.0, or Apache-2.0)",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.iceboat.IceBoat"
+		]
+	},
+	"mixins": [
+		"iceboat.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.15.7",
+		"fabric": "*",
+		"minecraft": "1.21.6"
+	}
+}
