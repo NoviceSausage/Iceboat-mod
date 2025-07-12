@@ -16,7 +16,7 @@ IceBoat is a Minecraft mod for version 1.21.6 that enhances boat travel on ice b
 
 ### Installation
 1. Install [Fabric Loader](https://fabricmc.net/use/) for Minecraft 1.21.6
-2. Download the IceBoat mod JAR file
+2. Download the IceBoat mod JAR file from https://modrinth.com/mod/iceboat
 3. Place the JAR file in your Minecraft `mods` folder
 4. Launch Minecraft with Fabric Loader
 
@@ -49,7 +49,7 @@ This project is available under multiple license options. See the [LICENSE_INFO.
 
 ### 安装方法
 1. 为Minecraft 1.21.6安装[Fabric加载器](https://fabricmc.net/use/)
-2. 下载冰船模组的JAR文件
+2. 下载冰船模组的JAR文件https://modrinth.com/mod/iceboat
 3. 将JAR文件放入Minecraft的`mods`文件夹中
 4. 使用Fabric加载器启动Minecraft
 
